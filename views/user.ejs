@@ -1,0 +1,44 @@
+<% include userlayout.ejs %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+  </head>
+  <body>
+     <center><h4><b>Total Registration: <%= data.length %></b></h4></center>
+    <table class="table table-dark table-hover">
+      <tr>
+        <th>Sno</th>
+        <th>HackId</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Roll</th>
+        <th>Year</th>
+        <th>Branch</th>
+        <th>Member 1</th>
+        <th>Member 2</th>
+        <th>Member 3</th>
+        <th>Member 4</th>
+      </tr>
+      <% for(var i=0; i<data.length; i++) { %>
+      <tr>
+          <td><%= i+1 %></td>
+          <td><%= data[i]._id %></td>
+          <td><%= data[i].name %></td>
+          <td><%= data[i].email %></td>
+          <td><%= data[i].phone %></td>
+          <td><%= data[i].roll %></td>
+          <td><%= data[i].year %></td>
+          <td><%= data[i].branch %></td>
+          <td><%= data[i].roll1 %></td>
+          <td><%= data[i].roll2 %></td>
+          <td><%= data[i].roll3 %></td>
+          <td><%= data[i].roll3 %></td>
+      </tr>
+      <% } %>
+
+    </table>
+  </body>
+</html>
